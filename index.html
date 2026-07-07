@@ -98,6 +98,16 @@ fbq('track', 'PageView');
 </div>
 
   <script>
+
+<!-- Event tracking script -->
+    
+<script>
+// Detect likely-automated traffic once, store the result
+window.isLikelyBot = !!(navigator.webdriver || !navigator.userAgent || document.hidden);
+</script>
+
+  // Event
+  <script>
 document.getElementById('telegramBtn').addEventListener('click', function(e){
   e.preventDefault();
   const telegramLink = this.href; // this part was already correct — reads from the <a> tag
