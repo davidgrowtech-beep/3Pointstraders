@@ -120,7 +120,7 @@ fbq('track', 'PageView');
 
         // Meta Pixel tracking: Subscribe event
         if (typeof fbq !== 'undefined') {
-            fbq('track','Subscribe',{
+            fbq('track','lead',{
                 content_name:'Telegram Community',
                 button_click:true
             },{
@@ -144,9 +144,9 @@ fbq('track', 'PageView');
         }
 
         if (time <= 0) {
-            clearInterval(countdown);
-            window.location.href = TELEGRAM_URL;
-        }
+    clearInterval(countdown);
+    trackAndRedirect({ preventDefault(){}, currentTarget: { href: TELEGRAM_URL } });
+}
     }, 1000);
 </script></body>
 </html>
